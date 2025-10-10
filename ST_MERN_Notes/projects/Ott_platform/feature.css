@@ -1,0 +1,44 @@
+body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: red;
+      margin-top: 30px;
+    }
+
+    .features {
+      border: 2px solid red;
+      margin: 30px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .feature-item {
+      margin: 20px 0;
+      padding: 10px;
+      border-bottom: 1px solid gray;
+    }
+
+    .feature-item:last-child {
+      border-bottom: none;
+    }
+    p{
+        text-align:start;
+    }
+    button{
+      margin-top: 15px;
+      height: 35px;
+        width:50px;
+        background-color: darkred;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+        border: none;
+        
+    }
