@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title> Js program</title>
+    </head>
+    <body>
+        <Script>
+            //define the url
+            const url="https://jsonplaceholder.typicode.com/posts";
+            //fecthes the data to given url
+            fetch(url)
+            //checks the function has the data
+            .then(function(request1){
+                //check the response is ok or not
+                 if (!request1.ok){
+                    //if not ok throw a error
+                    throw new Error("Error fetch data");
+                 }
+                 //if the response is ok,convert it into json
+                 return request1.json();
+
+            })
+            //second .then function handles the json data
+            .then(function(data){
+                //prints the data in console
+                console.log("data from api ",data);
+
+            })
+            //catch handles the error occurs in fetching or .()then
+            .catch(function(error){
+                //print the log error in the console
+                console.error("hello",error)
+            });
+
+
+        </Script>
+    </body>
+</html>

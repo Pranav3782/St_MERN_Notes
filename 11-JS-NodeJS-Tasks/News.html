@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Simple News App</title>
+</head>
+<body>
+  <h2>News Search</h2>
+  <input id="topic" type="text" placeholder="Enter topic">
+  <button onclick="getNews()">Search</button>
+
+  <div id="news"></div>
+
+  <script>
+    const API_KEY = "pub_892bfe5f9c9f45f4be7e652aa20bed57";
+
+    function getNews() {
+      let query = document.getElementById("topic").value;
+
+      fetch("https://newsdata.io/api/1/news?apikey=" + API_KEY + "&q=" + query)
+        .then(response => response.json())
+        .then(data => {
+          let output = "";
+
+          if (data.results) {
+            for (let i = 0; i < data.results.length; i++) {
+              output += "<p>" + data.results[i].title + "</p>";
+            }
+          } else {
+            output = "<p>No news found.</p>";
+          }
+
+          document.getElementById("news").innerHTML = output;
+        });
+    }
+  </script>
+</body>
+</html>

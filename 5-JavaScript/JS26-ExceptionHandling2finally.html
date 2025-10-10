@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> Javascript functions </title>
+        <script>
+            function divide(a,b){ //function declration
+                try{
+                    console.log("One");
+                    if(b==0){
+                        throw new Error("Divide by zero is not allowed")
+
+                    }
+                    let result=a/b;
+                    console.log(result);
+                    console.log("End");
+                }
+                catch(error){
+                    console.log("Program is error",error)
+                    console.error("errrror") // to print the error which indicates error in console
+                }
+                finally{ // finally is a block which excutes whether exception occurs or not
+                    console.log("finally block")
+                }
+            }
+            divide(10,0)
+                    
+        
+            
+        </script>
+        
+    </head>
+    <body>
+        <h2> JS function parameters</h2>
+        
+    
+    </body>
+</html>

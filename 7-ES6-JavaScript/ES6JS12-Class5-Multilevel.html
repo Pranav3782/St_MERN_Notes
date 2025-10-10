@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>JS</title>
+  </head>
+  <body>
+    <h1>Multilevel inheritence</h1>
+    <script>
+      class Car {
+        constructor(brand
+          
+        ) {
+          this.brand = brand;
+        }
+        displayBrand() {
+          document.write("<br> Brand name is " + this.brand);
+        }
+      }
+      class Model extends Car {
+        constructor(brand, model) {
+          super(brand);
+          this.model = model;
+        }
+        displayModel() {
+          document.write("<br> Model name " + this.model);
+        }
+      }
+
+      class Varient extends Model {
+        constructor(brand, model, varient) {
+          super(brand, model);
+          this.varient = varient;
+        }
+        displayVarient() {
+          document.write("<br> Varient name is " + this.varient);
+        }
+      }
+      var mycar = new Varient("tata", "saffari", "xyz");
+      mycar.displayVarient();
+      mycar.displayBrand();
+      mycar.displayModel();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title> Throw example </title> 
+    </head>
+    <body>
+        <h2> JS PraseInt</h2>
+        <script>
+      function checkAge(age){
+        if(age<18){
+            throw "Age must be older 18 <br>";
+        }
+        return "Access granted";
+      }
+      try {
+        let result=checkAge(15);
+        document.write(result);
+      }
+      catch(err){
+        document.write("<br>Caught exception : "+err);
+          }
+        finally{
+            document.write("<br> End of the program");
+        }
+        </script>
+    </body>
+</html>
